@@ -1,0 +1,178 @@
+{
+    "restaurants":[
+        {
+            "name":"Midnight Mania",
+            "foodtype":["Italian", "Pizzas", "Continental"],
+            "starrating":"4",
+            "timeclosest":"12",
+            "id":1,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Mania",
+            "foodtype":["North Indian", "South", "Continental"],
+            "starrating":"4.2",
+            "timeclosest":"22",
+            "id":2,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/birthday-cake.svg"
+        },
+        {
+            "name":"Midnight",
+            "foodtype":["Chinese", "Vietnamese", "Continental"],
+            "starrating":"4.6",
+            "timeclosest":"36",
+            "id":3,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-anniversary.svg"
+        },
+        {
+            "name":"Sunday Masala",
+            "foodtype":["South", "South indian", "North indian"],
+            "starrating":"3",
+            "timeclosest":"32",
+            "id":4,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/retirement.svg"
+        },
+        {
+            "name":"Sichi Sagar",
+            "foodtype":["Italian", "Pizzas"],
+            "starrating":"3.5",
+            "timeclosest":"54",
+            "id":5,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/house-warming.svg"
+        },
+        {
+            "name":"Sagar",
+            "foodtype":["Italian", "Pasta", "Pizzas"],
+            "starrating":"2.5",
+            "timeclosest":"44",
+            "id":6,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Saddy",
+            "foodtype":["North Indian", "Indian"],
+            "starrating":"4.1",
+            "timeclosest":"10",
+            "id":7,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/birthday-cake.svg"
+        },
+        {
+            "name":"Monday dhamaal",
+            "foodtype":["Milkshake", "South", "Andhra"],
+            "starrating":"3.3",
+            "timeclosest":"22",
+            "id":8,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/retirement.svg"
+        },
+        {
+            "name":"Meal on wheel",
+            "foodtype":["Chinese", "Vietnamese", "Sea food"],
+            "starrating":"4.6",
+            "timeclosest":"36",
+            "id":9,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Sunday Masala",
+            "foodtype":["Fish", "South", "Sea food"],
+            "starrating":"3",
+            "timeclosest":"32",
+            "id":10,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Sichi Sagar",
+            "foodtype":["Italian", "Juice", "Continental"],
+            "starrating":"3.5",
+            "timeclosest":"54",
+            "id":11,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/birthday-cake.svg"
+        },
+        {
+            "name":"Gooli",
+            "foodtype":["Burger", "Pizzas", "Continental"],
+            "starrating":"4",
+            "timeclosest":"12",
+            "id":12,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Swiggy",
+            "foodtype":["Italian", "South", "Milkshakes"],
+            "starrating":"4.2",
+            "timeclosest":"22",
+            "id":13,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Hotel Mariott",
+            "foodtype":["Chinese", "Vietnamese", "Continental"],
+            "starrating":"4.6",
+            "timeclosest":"36",
+            "id":14,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/dussehra.svg"
+        },
+        {
+            "name":"Cafeteria sam",
+            "foodtype":["South", "South indian", "East indian"],
+            "starrating":"3",
+            "timeclosest":"32",
+            "id":15,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/retirement.svg"
+        },
+        {
+            "name":"Sichi",
+            "foodtype":["Italian", "American", "Continental"],
+            "starrating":"3.8",
+            "timeclosest":"54",
+            "id":16,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Dada cafe",
+            "foodtype":["Italian", "Korean", "Mexican"],
+            "starrating":"4",
+            "timeclosest":"12",
+            "id":17,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Cafe Om",
+            "foodtype":["Italian", "South", "Japnese"],
+            "starrating":"4.1",
+            "timeclosest":"22",
+            "id":18,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Sam ",
+            "foodtype":["Chinese", "Turkish", "Labenese"],
+            "starrating":"4.6",
+            "timeclosest":"36",
+            "id":19,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/dussehra.svg"
+        },
+        {
+            "name":"Happy",
+            "foodtype":["Saudi Cusine", "South indian", "West indian"],
+            "starrating":"3.1",
+            "timeclosest":"32",
+            "id":20,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/happy-frienship.svg"
+        },
+        {
+            "name":"Paratha House",
+            "foodtype":["French", "Sam", "North Indian"],
+            "starrating":"2",
+            "timeclosest":"54",
+            "id":21,
+            "img":"https://card-program-files.s3.amazonaws.com/retailHDFC/birthday-cake.svg"
+        }
+    ],
+    "searchs":[
+        {
+            "id":1,
+            "tags":["French", "Sam", "North Indian"]
+        }
+    ]
+}

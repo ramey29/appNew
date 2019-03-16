@@ -1,0 +1,42 @@
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+    font-family: IBMPlexSans-Regular;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+input,
+select {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: IBMPlexSans-Regular;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height:20px;
+    padding: 22px 16px;
+    border-radius: 2px;
+    &:disabled {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+img{width:100%;}
+.fLft{float:left;}
+.w100{width:100%;}
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
+.clearfix{
+    @include clearfix;  
+}
+
+
