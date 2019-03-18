@@ -137,6 +137,7 @@ export default {
             
             let searchResults = []
             let searchText = text.toLowerCase();
+            this.restaurants = JSON.parse(localStorage.getItem('restaurants'));
             for (var i = 0; i < this.restaurants.length; i++) {
             let name = this.restaurants[i].name.toLowerCase().search(searchText);
             
