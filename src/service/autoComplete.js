@@ -1,11 +1,11 @@
 export function autocomplete(inp, arr) {
-  var currentFocus;
-  
+  var curFocus;
+
       inp.addEventListener("input", function(e) {
           var a, b, i, val = this.value;
           closeAllLists();
           if (!val) { return false;}
-          currentFocus = -1;
+          curFocus = -1;
           a = document.createElement("DIV");
           a.setAttribute("id", this.id + "autocomplete-list");
           a.setAttribute("class", "autocomplete-items");
@@ -36,24 +36,24 @@ export function autocomplete(inp, arr) {
           var x = document.getElementById(this.id + "autocomplete-list");
           if (x) x = x.getElementsByTagName("div");
           if (e.keyCode == 40) {
-            currentFocus++;
+            curFocus++;
             addActive(x);
           } else if (e.keyCode == 38) { //up
-            currentFocus--;
+            curFocus--;
             addActive(x);
           } else if (e.keyCode == 13) {
             e.preventDefault();
-            if (currentFocus > -1) {
-              if (x) x[currentFocus].click();
+            if (curFocus > -1) {
+              if (x) x[curFocus].click();
             }
           }
       });
       function addActive(x) {
         if (!x) return false;
         removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        x[currentFocus].classList.add("autocomplete-active");
+        if (curFocus >= x.length) curFocus = 0;
+        if (curFocus < 0) curFocus = (x.length - 1);
+        x[curFocus].classList.add("autocomplete-active");
       }
       function removeActive(x) {
         for (var i = 0; i < x.length; i++) {

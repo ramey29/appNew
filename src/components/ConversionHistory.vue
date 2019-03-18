@@ -3,7 +3,7 @@
         <div class="searchConatiner">
             <div class="searchInner">
                 <div class="w100">
-                    <input @keyup="Emptysearch" v-on:keyup.enter="search(searchTerm)" v-on:keydown.enter="Emptysearch()"  type="text" class="" v-model="searchTerm" placeholder="Search for restaurants near you" autocomplete="on" id="searchInput"/>
+                    <input v-model="searchTerm" @keyup="Emptysearch" v-on:keyup.enter="search(searchTerm)" v-on:keyup="Emptysearch()" v-on:keydown="autoComplete()" type="text" class=""  placeholder="Search for restaurants near you" autocomplete="on" id="searchInput"/>
                     <div class="btnDv">
                     <button class="btn new-btn" type="button" @click="search(searchTerm)">
                         <span class="search-icon" >SEARCH</span>
@@ -60,7 +60,7 @@ export default {
             tags:[],
             tagsBoolean:false,
             order:'asc',
-            autocompleteVar: ["pizzas", "pastry"],
+            autocompleteVar: [],
             page: 1,
             limit: 40,
             totalCount: 30
@@ -85,6 +85,7 @@ export default {
             $event.target.parentNode.remove();
             this.tags.splice(index,1);
             this.searchTerm = this.tags.join(' ');
+            document.getElementById('searchInput').value = this.searchTerm;
             console.log(this.tags);
             if(this.tags.length < 1){
                 this.tagsBoolean = false;
@@ -107,6 +108,13 @@ export default {
                     this.restaurants = response.data;
                     this.totalCount =  response.headers["x-total-count"];
                     localStorage.setItem('restaurants', JSON.stringify(this.restaurants));
+                    if(this.autocompleteVar.length < 1){
+                        let autoVar = [...new Set(response.data.map(a => a.name))];
+                        let x = this.autocompleteVar.concat(autoVar);
+                        this.autocompleteVar = [...x]
+                        console.log(this.autocompleteVar);
+                        localStorage.setItem('autocompleteVar', JSON.stringify(this.autocompleteVar));
+                    }
                     
                 })
                 .catch(error => {
@@ -115,15 +123,18 @@ export default {
         },
 
         search(text) {
+            let x = document.getElementById('searchInput').value;
+            this.searchTerm = text = text == x ? text : x;
             if (this.searchTerm != '') {
-            this.showViewAll = 'false';
-            this.tags = [];
-            this.tags = text.split(' ');
-            this.tagsBoolean =  true;
+                this.showViewAll = 'false';
+                this.tags = [];
+                this.tags = text.split(' ');
+                this.tagsBoolean =  true;
             } else {
-            this.Emptysearch();
-            return;
+                this.Emptysearch();
+                return;
             }
+            
             let searchResults = []
             let searchText = text.toLowerCase();
             for (var i = 0; i < this.restaurants.length; i++) {
@@ -132,11 +143,9 @@ export default {
             const abc = this.restaurants[i].foodtype.filter(foodtypes => foodtypes.toLowerCase().indexOf(searchText) > -1);
             if (name > -1 || abc.length > 0) {
                 searchResults.push(this.restaurants[i]);
-                this.autocompleteVar.push(this.restaurants[i].name);
             }
             }
             this.autocompleteVar.push(text);
-            localStorage.setItem('autocompleteVar', JSON.stringify(this.autocompleteVar));
             this.noSearchResults = (searchResults.length == 0) ? true : false
             this.restaurants = [...searchResults];
       },
